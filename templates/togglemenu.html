@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toggle menu</title>
+    <script type="text/javascript">
+    function togglemenu(){
+        document.getElementById('sidebar').classList.toggle('active');
+    }
+    </script>
+</head>
+<body>
+    <div class='toggle-btn' onclick='togglemenu()' >
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div id='sidebar' >
+        <ul>
+            <li>Contact</li>
+            <li>History</li>
+            <li>Calender</li>
+            <li>Skills</li>
+        </ul>
+    </div>
+</body>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #sidebar{
+        top: 50px;
+        left: -30%;
+        position: relative;
+        width: 30%;
+        background-color: black;
+
+    }
+
+    #sidebar li{
+        
+        color: white;
+        font-size: 25px;
+        padding: 30px;
+        border-bottom: 1px solid gray;
+        text-align: center;
+    }
+
+    .toggle-btn{
+        position: relative;
+        left: 5px;
+        top: 0px;
+    }
+
+    .toggle-btn span{
+        display: block;
+        background-color:black ;
+        width:30px ;
+        height: 5px;
+        margin: 3px;
+    }
+
+    #sidebar.active{
+        left:0;
+    }
+</style>
+</html>
